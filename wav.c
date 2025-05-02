@@ -99,9 +99,8 @@ int main(int argc, char *argv[]){
             continue;
         }
         for (int i = 0; i < samplesRead; i += fc.channels) {
-            DrawLine(i, (screenHeight - scale * data[i]) / 2,
-                        i, (screenHeight + scale * data[i]) / 2,
-                        RAYWHITE);
+            int j = scale * data[i];
+            DrawLine(i, (screenHeight -j) / 2, i , (screenHeight + j) / 2, j>screenHeight/4?RED:BLUE);
         }
     
         EndDrawing();
