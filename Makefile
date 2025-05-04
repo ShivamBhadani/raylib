@@ -1,5 +1,5 @@
 CC = gcc
-LDFLAGS =  -lraylib -lopengl32 -lgdi32 -lwinmm
+LDFLAGS =  -lraylib -lopengl32 -lgdi32 -lwinmm -lm
 
 SRC ?= main.c
 OBJ =
